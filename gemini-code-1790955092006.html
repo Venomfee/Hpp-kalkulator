@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HPP Produk — Kentang Goreng Topping Ayam Chicken</title>
+<style>
+:root{--navy:#142033;--blue:#1769d1;--yellow:#ffc928;--green:#16a36a;--bg:#f3f6fa;--text:#172235;--muted:#667085;--card:#fff;--line:#dfe5ee}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{background:var(--navy);color:white;padding:16px 22px;position:sticky;top:0;z-index:5;box-shadow:0 3px 14px #0002}
+.top{max-width:1250px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:12px}.logo{font-size:38px}.brand b{font-size:22px}.brand small{display:block;color:#b9c5d8}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav button{border:0;background:transparent;color:white;padding:10px 14px;border-radius:9px;cursor:pointer}.nav button:hover{background:#ffffff16}
+.hero{background:linear-gradient(90deg,#0c1422ee,#0c142288),url("https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1800&q=80") center/cover;min-height:300px;color:#fff;display:flex;align-items:center}.hero-inner{max-width:1250px;width:100%;margin:auto;padding:50px 24px}.badge{display:inline-block;background:var(--yellow);color:#172235;font-weight:800;padding:7px 12px;border-radius:8px;font-size:13px}.hero h1{font-size:clamp(32px,5vw,58px);line-height:1.03;margin:14px 0 12px;max-width:720px}.hero p{font-size:18px;max-width:700px;color:#edf2f8}
+.wrap{max-width:1250px;margin:24px auto;padding:0 18px}.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 4px 18px #1522380a}.card h2{margin:0 0 4px;font-size:21px}.sub{color:var(--muted);font-size:13px;margin-bottom:18px}
+.section{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:14px 0}.section-title{padding:11px 14px;font-weight:800;background:#fff4d4}.section-title.blue{background:#e8f2ff}.section-title.purple{background:#f1eaff}
+table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid var(--line);padding:9px 8px;font-size:13px;text-align:left}th{background:#f8fafc;color:#475467}td input{width:100%;border:1px solid #ccd5e1;border-radius:6px;padding:7px;min-width:65px}td.num{text-align:right}.totalrow{font-weight:800;background:#eefbf4}
+.btn{border:0;border-radius:9px;padding:11px 15px;font-weight:800;cursor:pointer}.primary{background:var(--blue);color:#fff}.secondary{background:#eef2f6;color:#25334a}.danger{background:#ffe7e7;color:#b42318}.add{margin:10px 0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.results{position:sticky;top:88px}.metric{border:1px solid var(--line);border-radius:12px;padding:18px;margin:12px 0}.metric.green{background:#ecfff7;border-color:#b9ead4}.metric.blue{background:#edf6ff;border-color:#c9e2ff}.metric .label{color:#526074;font-size:13px}.metric .value{font-size:30px;font-weight:900;margin-top:5px}.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:12px;overflow:hidden}.stat{padding:16px 10px;text-align:center;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat small{display:block;color:var(--muted)}.stat b{display:block;margin-top:7px;font-size:17px}.tips{background:#fff8df;border:1px solid #f2d878;border-radius:11px;padding:15px;margin-top:14px;font-size:13px}.history{display:none}
+footer{background:var(--navy);color:#c7d0df;margin-top:28px;padding:18px;text-align:center;font-size:12px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.results{position:static}.hero{min-height:340px}.stats{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:1/-1;border-top:1px solid var(--line)}}
+@media(max-width:600px){.top{align-items:flex-start}.nav{display:none}.hero-inner{padding:40px 20px}.wrap{padding:0 10px}.card{padding:14px;overflow:hidden}table{min-width:690px}.section{overflow:auto}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{grid-column:auto;border-top:0}}
+@media print{header,.hero,.actions,.tips,footer{display:none}.grid{display:block}.results{position:static}.card{box-shadow:none}.wrap{margin:0}.section{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header><div class="top">
+  <div class="brand"><span class="logo">🍟</span><div><b>HPP Produk</b><small>Hitung dengan mudah, usaha makin untung</small></div></div>
+  <nav class="nav">
+    <button onclick="go('hitung')">🧮 Hitung HPP</button>
+    <button onclick="go('riwayat')">📋 Riwayat & Cadangan</button>
+    <button onclick="window.print()">🖨️ Cetak</button>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="hero-inner">
+  <span class="badge">KALKULATOR HPP</span>
+  <h1>Kentang Goreng<br>Topping Ayam Chicken</h1>
+  <p>Website sederhana untuk menghitung Harga Pokok Produksi (HPP), harga jual, dan estimasi laba per porsi.</p>
+</div></section>
+
+<main class="wrap" id="hitung"><div class="grid">
+<section class="card">
+<h2>🧾 Input Bahan & Biaya</h2><div class="sub">Masukkan jumlah pemakaian dan harga beli. Total akan dihitung otomatis.</div>
+
+<div class="section"><div class="section-title">1. Bahan Baku & Topping</div>
+<table id="ingredients"><thead><tr><th>Nama bahan</th><th>Jumlah</th><th>Satuan</th><th>Harga/satuan (Rp)</th><th>Total (Rp)</th><th></th></tr></thead><tbody></tbody></table>
+</div><button class="btn secondary add" onclick="addRow()">＋ Tambah bahan</button>
+
+<div class="section"><div class="section-title blue">2. Biaya Lain-lain</div>
+<table id="others"><thead><tr><th>Jenis biaya</th><th>Jumlah</th><th>Satuan</th><th>Harga/satuan (Rp)</th><th>Total (Rp)</th><th></th></tr></thead><tbody></tbody></table>
+</div><button class="btn secondary add" onclick="addOther()">＋ Tambah biaya</button>
+
+<div class="section"><div class="section-title purple">3. Produksi & Harga Jual</div>
+<div style="padding:15px;display:grid;grid-template-columns:1fr 1fr;gap:14px">
+<label>Jumlah produksi (porsi)<input id="portions" type="number" min="1" value="10" style="width:100%;padding:10px;margin-top:6px;border:1px solid #ccd5e1;border-radius:7px"></label>
+<label>Harga jual/porsi (Rp)<input id="sell" type="number" min="0" value="25000" style="width:100%;padding:10px;margin-top:6px;border:1px solid #ccd5e1;border-radius:7px"></label>
+</div></div>
+
+<div class="actions">
+  <button class="btn primary" onclick="calculate()">🧮 Hitung HPP</button>
+  <button class="btn secondary" onclick="resetAll()">↻ Reset</button>
+  <button class="btn primary" onclick="saveData()">💾 Simpan Riwayat</button>
+</div>
+</section>
+
+<aside class="card results">
+<h2>📈 Hasil Perhitungan</h2><div class="sub">Ringkasan otomatis dari data yang Anda masukkan.</div>
+<div class="metric green"><div class="label">Total Biaya Produksi</div><div class="value" id="total">Rp 0</div></div>
+<div class="metric blue"><div class="label">HPP per Porsi</div><div class="value" id="hpp">Rp 0</div></div>
+<div class="stats">
+  <div class="stat"><small>Produksi</small><b id="statPortion">0 porsi</b></div>
+  <div class="stat"><small>Harga Jual</small><b id="statSell">Rp 0</b></div>
+  <div class="stat"><small>Laba Kotor/porsi</small><b id="profit">Rp 0</b></div>
+</div>
+<div class="tips"><b>💡 Cara membaca hasil</b><ul><li>HPP = total biaya produksi ÷ jumlah porsi.</li><li>Laba kotor/porsi = harga jual − HPP.</li><li>Biaya kemasan, saus, gas/listrik, dan tenaga kerja sebaiknya ikut dimasukkan.</li></ul></div>
+</aside>
+</div>
+
+<section class="card history" id="riwayat" style="margin-top:18px">
+  <h2>📋 Riwayat Simpanan & Cadangan Data</h2>
+  <div class="sub">Data tersimpan di browser perangkat Anda. Anda juga bisa mendownload atau mengupload file cadangan agar data aman.</div>
+  
+  <div style="display:flex; gap:10px; margin-bottom:15px; flex-wrap:wrap;">
+    <button class="btn secondary" onclick="exportData()">📥 Download Cadangan Data (JSON)</button>
+    <button class="btn secondary" onclick="document.getElementById('importFile').click()">📤 Upload / Pulihkan Data</button>
+    <input type="file" id="importFile" style="display:none" accept=".json" onchange="importData(event)">
+  </div>
+
+  <div id="historyBox"></div>
+</section>
+</main>
+
+<footer>🍟 HPP Produk • Kalkulator Kentang Goreng Topping Ayam Chicken • Siap Deploy ke Netlify</footer>
+
+<script>
+const defaults=[
+  ["Kentang",1000,"gram",12000],["Ayam fillet (topping)",500,"gram",35000],["Tepung bumbu ayam",100,"gram",8000],
+  ["Tepung terigu",50,"gram",6000],["Minyak goreng",200,"ml",14000],["Saus keju / saus topping",100,"gram",15000],["Bumbu & seasoning",50,"gram",5000]
+];
+const otherDefaults=[["Gas / Listrik",1,"paket",2000],["Kemasan (cup/box)",1,"pcs",1500],["Tenaga kerja",1,"porsi",2000],["Biaya overhead",1,"porsi",1500]];
+const rp=n=>new Intl.NumberFormat("id-ID").format(Math.round(n||0));
+function rowHTML(x){return `<tr><td><input class="name" value="${x[0]}"></td><td><input class="qty" type="number" min="0" value="${x[1]}"></td><td><input class="unit" value="${x[2]}"></td><td><input class="price" type="number" min="0" value="${x[3]}"></td><td class="num line">Rp 0</td><td><button class="btn danger" onclick="this.closest('tr').remove();calculate()">×</button></td></tr>`}
+function loadRows(){ingredients.innerHTML="";others.innerHTML="";defaults.forEach(x=>ingredients.insertAdjacentHTML("beforeend",rowHTML(x)));otherDefaults.forEach(x=>others.insertAdjacentHTML("beforeend",rowHTML(x)));calculate()}
+function addRow(){ingredients.insertAdjacentHTML("beforeend",rowHTML(["Bahan baru",1,"pcs",0]));}
+function addOther(){others.insertAdjacentHTML("beforeend",rowHTML(["Biaya baru",1,"pcs",0]));}
+function sumTable(id){let total=0;document.querySelectorAll("#"+id+" tbody tr").forEach(r=>{let q=+r.querySelector(".qty").value||0,p=+r.querySelector(".price").value||0,t=q*p;total+=t;r.querySelector(".line").textContent="Rp "+rp(t)});return total}
+function calculate(){let a=sumTable("ingredients"),b=sumTable("others"),total=a+b,p=+portions.value||1,s=+sell.value||0,h=total/p;document.getElementById("total").textContent="Rp "+rp(total);document.getElementById("hpp").textContent="Rp "+rp(h);document.getElementById("statPortion").textContent=p+" porsi";document.getElementById("statSell").textContent="Rp "+rp(s);document.getElementById("profit").textContent="Rp "+rp(s-h);return {a,b,total,p,s,h,profit:s-h}}
+
+function saveData(){
+  let c=calculate(),data={saved:new Date().toLocaleString("id-ID"),...c,ingredients:[...document.querySelectorAll("#ingredients tbody tr")].map(r=>[r.querySelector(".name").value,+r.querySelector(".qty").value,r.querySelector(".unit").value,+r.querySelector(".price").value]),others:[...document.querySelectorAll("#others tbody tr")].map(r=>[r.querySelector(".name").value,+r.querySelector(".qty").value,r.querySelector(".unit").value,+r.querySelector(".price").value])};
+  let h=JSON.parse(localStorage.getItem("hppHistory")||"[]");h.unshift(data);localStorage.setItem("hppHistory",JSON.stringify(h.slice(0,30)));renderHistory();alert("Data HPP berhasil disimpan!")
+}
+
+function renderHistory(){
+  let h=JSON.parse(localStorage.getItem("hppHistory")||"[]");
+  historyBox.innerHTML=h.length?h.map((x,i)=>`<div style="border:1px solid var(--line);padding:12px;border-radius:9px;margin:8px 0;background:#fff"><b>${x.saved}</b> — HPP <b>Rp ${rp(x.h)}</b>/porsi — Jual Rp ${rp(x.s)} — Laba Rp ${rp(x.profit)} <button class="btn danger" style="float:right;padding:5px 10px;font-size:12px" onclick="delHistory(${i})">Hapus</button></div>`).join(""):"Belum ada riwayat tersimpan.";
+}
+
+function delHistory(i){let h=JSON.parse(localStorage.getItem("hppHistory")||"[]");h.splice(i,1);localStorage.setItem("hppHistory",JSON.stringify(h));renderHistory()}
+function resetAll(){if(confirm("Kembalikan ke data contoh?"))loadRows()}
+function go(id){document.getElementById(id).style.display="block";document.getElementById(id).scrollIntoView({behavior:"smooth"})}
+
+function exportData(){
+  let data=localStorage.getItem("hppHistory")||"[]";
+  let blob=new Blob([data],{type:"application/json"});
+  let a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="backup-hpp-kentang.json";a.click();
+}
+
+function importData(e){
+  let file=e.target.files[0];if(!file)return;
+  let reader=new FileReader();
+  reader.onload=function(event){
+    try{
+      JSON.parse(event.target.result);
+      localStorage.setItem("hppHistory",event.target.result);
+      renderHistory();
+      alert("Data berhasil dipulihkan!");
+    }catch(err){alert("Format file salah.");}
+  };
+  reader.readAsText(file);
+}
+
+document.addEventListener("input",e=>{if(e.target.matches("input"))calculate()});
+loadRows();renderHistory();
+</script>
+</body>
+</html>
